@@ -16,7 +16,7 @@ def Update(info): #to add any new value to the table by getting "info" as argume
 		cursor.execute("select * from ITEM_LIST") #to collect the data and have in the cursor from table
 		data = cursor.fetchall() #by cursor fetching all data's and printing it
 		
-		cursor.execute(f"insert into ITEM_LIST values(NULL,'{info[1]}',{info[2]},{info[2]})") #sql command to insert the given values by the user
+		cursor.execute(f"insert into ITEM_LIST values(NULL,'{info[0]}',{info[1]},{info[2]})") #sql command to insert the given values by the user
 
 def Remove(ID): #to remove or del the element from table by getting "ID" as argument
 		cursor.execute(f"delete from ITEM_LIST where ID = {ID}") #sql command to del the data entered by the user
